@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<DialogPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bankManagementSystem.RegisterController">
+   <content>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="579.0">
+   <AnchorPane layoutX="-85.0" prefHeight="82.0" prefWidth="605.0" style="-fx-background-color: #9f4e1b;">
+      <ImageView fx:id="shieldImageView" fitHeight="52.0" fitWidth="69.0" layoutX="114.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../../resources/shield.png" />
+      </ImageView>
+      <Label layoutX="198.0" layoutY="28.0" text="User Registration" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </AnchorPane>
+   <Label layoutX="92.0" layoutY="98.0" text="Firstname">
+      <font>
+         <Font size="13.0" />
+      </font>
+   </Label>
+   <TextField fx:id="firstNameTextFrield" layoutX="92.0" layoutY="122.0" onAction="#createAccount" prefHeight="25.0" prefWidth="336.0" promptText="Firstname" />
+   <Label layoutX="92.0" layoutY="156.0" text="Lastname">
+      <font>
+         <Font size="13.0" />
+      </font>
+   </Label>
+   <TextField fx:id="lastNameTextFrield" layoutX="92.0" layoutY="180.0" onAction="#createAccount" prefHeight="25.0" prefWidth="336.0" promptText="Lastname" />
+   <Label layoutX="92.0" layoutY="214.0" text="Username">
+      <font>
+         <Font size="13.0" />
+      </font>
+   </Label>
+   <TextField fx:id="userNameTextFrield" layoutX="92.0" layoutY="238.0" onAction="#createAccount" prefHeight="25.0" prefWidth="336.0" promptText="Username" />
+   <Label layoutX="92.0" layoutY="273.0" text="Password">
+      <font>
+         <Font size="13.0" />
+      </font>
+   </Label>
+   <PasswordField fx:id="setPasswordField" layoutX="92.0" layoutY="298.0" onAction="#createAccount" prefHeight="25.0" prefWidth="336.0" promptText="Password" />
+   <Label layoutX="92.0" layoutY="330.0" text="Confirm Password">
+      <font>
+         <Font size="13.0" />
+      </font>
+   </Label>
+   <PasswordField fx:id="confirmPasswordField" layoutX="92.0" layoutY="355.0" onAction="#createAccount" prefHeight="25.0" prefWidth="336.0" promptText="Confirm Password" />
+   <Button fx:id="registerButton" layoutX="92.0" layoutY="400.0" mnemonicParsing="false" onAction="#createAccount" prefHeight="25.0" prefWidth="336.0" style="-fx-background-color: #9f4e1b;" text="Register" textFill="WHITE">
+      <font>
+         <Font size="13.0" />
+      </font>
+   </Button>
+   <Label fx:id="registrationMessageLabel" alignment="CENTER" layoutX="90.0" layoutY="90.0" prefHeight="17.0" prefWidth="336.0" textFill="#227bff" />
+   <Label fx:id="confirmPasswordLabel" alignment="CENTER" layoutX="202.0" layoutY="331.0" prefHeight="17.0" prefWidth="225.0" textFill="#ff7575" />
+      </AnchorPane>
+   </content>
+</DialogPane>

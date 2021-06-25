@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<DialogPane xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bankManagementSystem.TransferDialogController">
+   <content>
+      <VBox prefWidth="400.0" spacing="10.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="400.0" text="TRANSFER CASH">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <HBox prefWidth="200.0">
+               <children>
+                  <Label prefWidth="200.0" text="Name:" />
+                  <Label fx:id="accountNameLabel" prefWidth="200.0" text="Account Name" />
+               </children>
+            </HBox>
+            <HBox layoutX="20.0" layoutY="51.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="200.0" text="Balance:" />
+                  <Label fx:id="balanceLabel" prefWidth="200.0" text="Balance" />
+               </children>
+            </HBox>
+            <VBox spacing="5.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="400.0" text="TO">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <VBox>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="400.0" text="Account Name" />
+                        <Label prefHeight="17.0" prefWidth="400.0" text="Account ID" />
+                        <TextField fx:id="toAccountTextField" promptText="Account ID" />
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label prefWidth="400.0" text="Transfer Amount" />
+                        <TextField fx:id="transferAmountTextField" promptText="Transfer amount" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </content>
+</DialogPane>

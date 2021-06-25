@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - bankmanagement@localhost">
+  <database-model serializer="dbm" dbms="MARIADB" family-id="MARIADB" format-version="4.21">
+    <root id="1">
+      <ServerVersion>10.4.14</ServerVersion>
+      <DefaultEngine>InnoDB</DefaultEngine>
+      <DefaultCasing>lower/lower</DefaultCasing>
+    </root>
+    <schema id="2" parent="1" name="act1">
+      <Collation>utf8mb4_general_ci</Collation>
+    </schema>
+    <schema id="3" parent="1" name="act4">
+      <Collation>utf8mb4_general_ci</Collation>
+    </schema>
+    <schema id="4" parent="1" name="bankmanagement">
+      <Current>1</Current>
+      <Collation>utf8mb4_general_ci</Collation>
+    </schema>
+    <schema id="5" parent="1" name="basics">
+      <Collation>utf8mb4_general_ci</Collation>
+    </schema>
+    <schema id="6" parent="1" name="dcit24">
+      <Collation>utf8mb4_general_ci</Collation>
+    </schema>
+    <schema id="7" parent="1" name="employee">
+      <Collation>utf8mb4_general_ci</Collation>
+    </schema>
+    <schema id="8" parent="1" name="exercise1">
+      <Collation>utf8mb4_general_ci</Collation>
+    </schema>
+    <schema id="9" parent="1" name="information_schema">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="10" parent="1" name="mysql">
+      <Collation>utf8mb4_general_ci</Collation>
+    </schema>
+    <schema id="11" parent="1" name="performance_schema">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="12" parent="1" name="phpmyadmin">
+      <Collation>utf8_bin</Collation>
+    </schema>
+    <schema id="13" parent="1" name="phptest">
+      <Collation>utf8mb4_general_ci</Collation>
+    </schema>
+    <schema id="14" parent="1" name="test">
+      <Collation>latin1_swedish_ci</Collation>
+    </schema>
+    <schema id="15" parent="1" name="uploads">
+      <Collation>utf8mb4_general_ci</Collation>
+    </schema>
+    <schema id="16" parent="1" name="website">
+      <Collation>utf8mb4_general_ci</Collation>
+    </schema>
+  </database-model>
+</dataSource>

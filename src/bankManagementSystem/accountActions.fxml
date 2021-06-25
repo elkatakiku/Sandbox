@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="actionsWindow" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #9f4e1b;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bankManagementSystem.AccountActionsController">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="900.0">
+         <children>
+            <ImageView fx:id="logoImageView" fitHeight="70.0" fitWidth="70.0" layoutX="44.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/cropped_logo.png" />
+               </image></ImageView>
+            <Button fx:id="logoutButton" layoutX="790.0" layoutY="47.0" mnemonicParsing="false" onAction="#logoutButtonHandler" prefHeight="25.0" prefWidth="88.0" style="-fx-background-radius: 10px; -fx-background-color: #ee4d44;" text="Logout" textFill="WHITE" />
+            <Label fx:id="adminNameLabel" alignment="CENTER_RIGHT" layoutX="419.0" layoutY="49.0" prefHeight="21.0" prefWidth="359.0" text="Username" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label layoutX="117.0" layoutY="32.0" prefHeight="17.0" prefWidth="134.0" text="Sandbox" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="119.0" layoutY="67.0" prefHeight="17.0" prefWidth="141.0" text="Financial Services" textFill="WHITE" />
+            <Button fx:id="backButton" layoutX="10.0" layoutY="48.0" mnemonicParsing="false" onAction="#backButtonHandler" text="&lt;" />
+            <VBox layoutX="591.0" layoutY="130.0" spacing="10.0">
+               <children>
+                  <VBox prefHeight="181.0" prefWidth="242.0" style="-fx-background-color: WHITE;">
+                     <children>
+                        <Label prefHeight="60.0" prefWidth="263.0" text="Account Summary">
+                           <font>
+                              <Font name="Arial Bold" size="15.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="71.0" prefWidth="80.0" text="Account ID">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font></Label>
+                              <Label fx:id="accountIDLabel" prefHeight="50.0" prefWidth="150.0" text=": Account ID">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font></Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="50.0" prefWidth="80.0" text="Balance">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font></Label>
+                              <Label fx:id="balanceLabel" prefHeight="50.0" prefWidth="150.0" text=": Balance">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font></Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="50.0" prefWidth="80.0" text="Type">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font></Label>
+                              <Label fx:id="accountTypeLabel" prefHeight="50.0" prefWidth="150.0" text=": Type">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font></Label>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox spacing="10.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#depositButtonHandler" prefHeight="50.0" prefWidth="242.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <HBox alignment="CENTER" prefHeight="49.0" prefWidth="163.0">
+                                 <ImageView fx:id="depositImageView" fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../../resources/deposit.png" />
+                                 </ImageView>
+                                 <Label alignment="CENTER" prefHeight="45.0" prefWidth="131.0" text="DEPOSIT" />
+                              </HBox>
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#withdrawButtonHandler" prefHeight="50.0" prefWidth="242.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="withdrawImageView" fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../resources/with.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" prefHeight="45.0" prefWidth="131.0" text="WITHDRAW" />
+                                 </children>
+                              </HBox>
+                           </graphic>
+                        </Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#transferCashButtonHandler" prefHeight="50.0" prefWidth="242.0" textAlignment="CENTER" wrapText="true">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <ImageView fx:id="transferCashImageView" fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../../resources/trasfer.png" />
+                                 </ImageView>
+                                 <Label alignment="CENTER" prefHeight="45.0" prefWidth="131.0" text="TRANSFER CASH" />
+                              </HBox>
+                           </graphic>
+                        </Button>
+                        <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#transactionHistoryButtonHandler" prefHeight="50.0" prefWidth="242.0" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="transactionHistoryImageView" fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../resources/transaction-history.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" prefHeight="45.0" prefWidth="131.0" text="TRANSACTION HISTORY" />
+                                 </children>
+                              </HBox>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children></VBox>
+            <AnchorPane layoutX="93.0" layoutY="130.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="421.0" prefWidth="490.0">
+               <children>
+                  <GridPane alignment="CENTER_LEFT" prefHeight="421.0" prefWidth="330.0">
+                    <columnConstraints>
+                      <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.0" minWidth="10.0" prefWidth="186.0" />
+
+                          </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label fx:id="customerNameLabel" text="Account Name" textFill="WHITE" GridPane.columnSpan="2">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="accountNumberLabel" prefHeight="25.0" prefWidth="214.0" text=": XXXXXX" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="25.0" prefWidth="157.0" text="Account Number" textFill="WHITE" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="nationalityLabel" prefHeight="25.0" prefWidth="136.0" text=": Nationality" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text="Nationality" textFill="WHITE" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text="Gender" textFill="WHITE" GridPane.rowIndex="5">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="genderLabel" prefHeight="25.0" prefWidth="142.0" text=": Female" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text="Contact Number" textFill="WHITE" GridPane.rowIndex="6">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="contactLabel" prefHeight="25.0" prefWidth="144.0" text=": 09XXXXXXXXX" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text="Occupation" textFill="WHITE" GridPane.rowIndex="7">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="occupationLabel" prefHeight="25.0" prefWidth="248.0" text=": Occupation" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text="Email" textFill="WHITE" GridPane.rowIndex="8">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="emailLabel" prefHeight="25.0" prefWidth="199.0" text=": Email" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text="Age" textFill="WHITE" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="ageLabel" prefHeight="25.0" prefWidth="199.0" text=": Age" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text="Birthdate" textFill="WHITE" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="birthdateLabel" prefHeight="25.0" prefWidth="218.0" text=": Birthdate" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </GridPane>
+                  <ImageView fx:id="displayImageView" fitHeight="200.0" fitWidth="200.0" layoutX="287.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../resources/199828920_1343702626026134_8830085139917556061_n.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

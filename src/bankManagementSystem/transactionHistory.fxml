@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<DialogPane maxHeight="500.0" minHeight="400.0" prefHeight="400.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bankManagementSystem.TransactionHistoryController">
+   <content>
+      <VBox alignment="TOP_CENTER" prefHeight="400.0">
+         <children>
+            <TableView fx:id="transactionHistoryTableView" prefHeight="370.0">
+              <columns>
+                  <TableColumn fx:id="transactionTypeColumn" prefWidth="150.0" text="Transaction Type" />
+                  <TableColumn fx:id="amountColumn" prefWidth="150.0" text="Amount" />
+                  <TableColumn fx:id="transactionDateColumn" prefWidth="150.0" text="Transaction Date" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </content>
+   <header>
+      <Label alignment="CENTER" prefHeight="74.0" text="TRANSACTION HISTORY">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </header>
+</DialogPane>

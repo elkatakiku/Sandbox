@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:id="activeWindow" alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bankManagementSystem.loginController">
+   <AnchorPane prefWidth="600.0" style="-fx-background-color: white;">
+      <children>
+            <Label alignment="CENTER" layoutX="331.0" layoutY="33.0" prefHeight="17.0" prefWidth="245.0" text="Log in">
+            <font>
+               <Font name="Arial Bold" size="46.0" />
+            </font></Label>
+
+                 <TextField fx:id="username" layoutX="347.0" layoutY="131.0" onAction="#login" prefHeight="25.0" prefWidth="211.0" promptText="Username" style="-fx-border-color: transparent transparent #9f4e1b transparent; -fx-border-style: hidden hidden solid hidden; -fx-background-color: transparent;" />
+           <PasswordField fx:id="password" layoutX="347.0" layoutY="192.0" onAction="#login" prefHeight="25.0" prefWidth="211.0" promptText="Password" style="-fx-border-color: transparent transparent #9f4e1b transparent; -fx-border-style: hidden hidden solid hidden; -fx-background-color: transparent;" />
+           <Button fx:id="loginBtn" layoutX="347.0" layoutY="242.0" onAction="#login" prefHeight="43.0" prefWidth="211.0" style="-fx-background-color: #9f4e1b; -fx-border-color: transparent; -fx-cursor: hand;" text="LOGIN" textFill="WHITE">
+            <font>
+               <Font size="15.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+            <effect>
+               <Glow />
+            </effect></Button>
+
+           <Button fx:id="registerButton" layoutX="394.0" layoutY="324.0" onAction="#createAccountForm" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Create an account">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor></Button>
+         <VBox alignment="CENTER" layoutX="-1.0" prefHeight="390.0" prefWidth="308.0" style="-fx-background-color: #9f4e1b;">
+            <children>
+               <ImageView fx:id="logoImageView" fitHeight="309.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../resources/199828920_1343702626026134_8830085139917556061_n.png" />
+                  </image></ImageView>
+            </children></VBox>
+         <Line endX="100.0" layoutX="451.0" layoutY="308.0" startX="-100.0" />
+         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="428.0" layoutY="300.0" prefHeight="17.0" prefWidth="50.0" style="-fx-background-color: white;" text="OR" />
+         <Label layoutX="347.0" layoutY="112.0" text="Username">
+            <font>
+               <Font size="13.0" />
+            </font>
+         </Label>
+         <Label layoutX="347.0" layoutY="172.0" text="Password" />
+         <Label fx:id="errorLabel" alignment="CENTER" layoutX="346.0" layoutY="91.0" prefHeight="17.0" prefWidth="211.0" text="Username or password is incorrect." textAlignment="CENTER" textFill="#ff3737" visible="false" wrapText="true" />
+      </children>
+   </AnchorPane>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
